@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  body { @apply bg-paper text-ink antialiased dark:bg-night dark:text-slate-200; }
+  :focus-visible { @apply outline outline-2 outline-offset-2 outline-cobalt dark:outline-cobalt-light; }
+}
+
+@layer components {
+  .wrap { @apply mx-auto w-full max-w-5xl px-5 sm:px-8; }
+  .panel { @apply rounded-lg border border-slate-300/70 bg-white/70 dark:border-night-line dark:bg-night-raised; }
+  .muted { @apply text-ink-soft dark:text-slate-400; }
+  .chip { @apply inline-block rounded border border-slate-300 px-2 py-0.5 text-xs text-ink-soft dark:border-night-line dark:text-slate-300; }
+  .btn { @apply inline-flex items-center rounded-md px-4 py-2 text-sm font-medium transition-colors; }
+  .btn-primary { @apply bg-cobalt text-white hover:bg-ink dark:bg-cobalt-light dark:text-night dark:hover:bg-white; }
+  .btn-ghost { @apply border border-slate-300 hover:border-cobalt hover:text-cobalt dark:border-night-line dark:hover:border-cobalt-light dark:hover:text-cobalt-light; }
+}
+
+/* One orchestrated moment: the match breakdown assembles on load */
+@keyframes settle {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+.settle { opacity: 0; animation: settle 0.5s ease-out forwards; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .settle { opacity: 1; animation: none; }
+}
