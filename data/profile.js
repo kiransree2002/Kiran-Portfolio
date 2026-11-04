@@ -91,7 +91,7 @@ export const experience = [
     role: "AI/ML Intern",
     org: "TrackGenesis",
     place: "Trivandrum, Kerala",
-    period: "Oct 2026 – Present",
+    period: "Oct 2026 – Nov 2026",
     points: [
       "Built an AI Resume Screener that parses resumes and ranks candidates against job descriptions, reducing manual shortlisting effort.",
       "Wrote a Python NLP pipeline to extract, clean and structure resume text from PDF and DOCX files.",
