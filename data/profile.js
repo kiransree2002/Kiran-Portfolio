@@ -58,16 +58,25 @@ export const projects = [
     problem:
       "Businesses struggle to efficiently process customer feedback, identify critical issues, and respond quickly and consistently.",
     solution:
-      "AI-powered review management system featuring sentiment analysis, topic classification, priority detection, suggested responses, customer review submission, secure employee authentication, and analytics dashboard.",
+      "Developed an AI-powered review management application using Python and Streamlit. Implemented sentiment classification using TF-IDF and Logistic Regression, rule-based topic classification and priority detection, and automated response suggestions. Built a SQLite database with multi-tenant data isolation and secure employee authentication.",
     contribution: [
-      "Implemented sentiment analysis, topic classification, and priority detection workflows for incoming reviews.",
-      "Built automated response suggestions to assist resolution and speed up customer support turnaround.",
-      "Integrated customer review submission with secure employee authentication and role-based access.",
-      "Developed an interactive analytics dashboard for real-time sentiment metrics and review insights.",
+      "Implemented sentiment classification using TF-IDF feature extraction and Logistic Regression.",
+      "Engineered rule-based topic classification, priority detection, and automated response suggestions.",
+      "Built a SQLite database with multi-tenant data isolation and secure employee authentication.",
+      "Developed an interactive analytics dashboard with real-time sentiment metrics and review insights.",
     ],
     outcome:
       "Streamlines end-to-end feedback resolution from customer submission to actionable analytics and automated responses.",
-    stack: ["Python", "Streamlit", "NLP", "LLM", "Sentiment Analysis", "Data Analytics"],
+    stack: [
+      "Python",
+      "Streamlit",
+      "Scikit-learn",
+      "TF-IDF",
+      "Logistic Regression",
+      "Pandas",
+      "SQLite",
+      "Plotly",
+    ],
     links: [
       { label: "Live demo", href: "https://revio-ai-review-assistant.streamlit.app/" },
       {
