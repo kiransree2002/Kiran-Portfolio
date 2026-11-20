@@ -43,7 +43,6 @@ export default function Hero() {
         <p className="muted mt-3 max-w-xl text-sm">{profile.seeking}</p>
         <div className="mt-8 flex flex-wrap gap-3">
           <a href="#projects" className="btn btn-primary">See projects</a>
-          <a href={profile.liveDemo} target="_blank" rel="noreferrer" className="btn btn-ghost">Try the live demo</a>
           <a href={`mailto:${profile.email}`} className="btn btn-ghost">Email me</a>
         </div>
       </div>
