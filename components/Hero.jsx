@@ -1,31 +1,41 @@
-import { profile, heroSample } from "@/data/profile";
+import { profile } from "@/data/profile";
 
-function MatchCard() {
+function HighlightsCard() {
   const d = (n) => ({ animationDelay: `${n * 120}ms` });
   return (
-    <div className="panel p-5 text-sm" aria-label="Example of an explainable match breakdown">
-      <p className="muted mb-4 text-xs">Sample output format from my resume screener</p>
-      <ul className="mb-4 space-y-2">
-        {heroSample.gates.map((g, i) => (
-          <li key={g} className="settle flex items-center gap-2" style={d(i + 1)}>
-            <span className="h-2 w-2 rounded-full bg-cobalt dark:bg-cobalt-light" />
-            {g}
-          </li>
-        ))}
-      </ul>
-      <div className="settle mb-2" style={d(4)}>
-        <p className="muted mb-1 text-xs">Matched skills</p>
-        <div className="flex flex-wrap gap-1.5">
-          {heroSample.matched.map((s) => (
-            <span key={s} className="chip !border-cobalt !text-cobalt dark:!border-cobalt-light dark:!text-cobalt-light">{s}</span>
-          ))}
+    <div className="panel p-5 text-sm" aria-label="AI/ML Project Highlights">
+      <p className="font-semibold text-ink dark:text-slate-200">AI/ML Project Highlights</p>
+
+      {/* AI Resume Screener */}
+      <div className="mt-4 border-b border-slate-200/80 pb-4 dark:border-night-line">
+        <p className="text-xs font-medium text-cobalt dark:text-cobalt-light">AI Resume Screener</p>
+        <div className="settle mt-2.5" style={d(1)}>
+          <p className="muted mb-1 text-xs">Matched Skills</p>
+          <div className="flex flex-wrap gap-1.5">
+            {["Python", "NLP", "SQL"].map((s) => (
+              <span key={s} className="chip !border-cobalt !text-cobalt dark:!border-cobalt-light dark:!text-cobalt-light">{s}</span>
+            ))}
+          </div>
+        </div>
+        <div className="settle mt-2" style={d(2)}>
+          <p className="muted mb-1 text-xs">Missing Skills</p>
+          <div className="flex flex-wrap gap-1.5">
+            <span className="chip line-through">Docker</span>
+          </div>
         </div>
       </div>
-      <div className="settle" style={d(5)}>
-        <p className="muted mb-1 text-xs">Missing skills</p>
-        <div className="flex flex-wrap gap-1.5">
-          {heroSample.missing.map((s) => <span key={s} className="chip line-through">{s}</span>)}
-        </div>
+
+      {/* Revio AI */}
+      <div className="mt-4">
+        <p className="text-xs font-medium text-cobalt dark:text-cobalt-light">Revio AI</p>
+        <ul className="mt-2.5 space-y-1.5">
+          {["Sentiment Analysis", "Topic Classification", "Priority Detection"].map((feat, i) => (
+            <li key={feat} className="settle flex items-center gap-2" style={d(i + 3)}>
+              <span className="h-1.5 w-1.5 rounded-full bg-cobalt dark:bg-cobalt-light" />
+              <span className="text-xs text-ink-soft dark:text-slate-300">{feat}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
@@ -46,7 +56,7 @@ export default function Hero() {
           <a href={`mailto:${profile.email}`} className="btn btn-ghost">Email me</a>
         </div>
       </div>
-      <MatchCard />
+      <HighlightsCard />
     </section>
   );
 }
