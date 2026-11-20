@@ -53,6 +53,30 @@ export const projects = [
     ],
   },
   {
+    name: "Revio AI – Intelligent Review Analysis and Customer Resolution Assistant",
+    featured: true,
+    problem:
+      "Businesses struggle to efficiently process customer feedback, identify critical issues, and respond quickly and consistently.",
+    solution:
+      "AI-powered review management system featuring sentiment analysis, topic classification, priority detection, suggested responses, customer review submission, secure employee authentication, and analytics dashboard.",
+    contribution: [
+      "Implemented sentiment analysis, topic classification, and priority detection workflows for incoming reviews.",
+      "Built automated response suggestions to assist resolution and speed up customer support turnaround.",
+      "Integrated customer review submission with secure employee authentication and role-based access.",
+      "Developed an interactive analytics dashboard for real-time sentiment metrics and review insights.",
+    ],
+    outcome:
+      "Streamlines end-to-end feedback resolution from customer submission to actionable analytics and automated responses.",
+    stack: ["Python", "Streamlit", "NLP", "LLM", "Sentiment Analysis", "Data Analytics"],
+    links: [
+      { label: "Live demo", href: "https://revio-ai-review-assistant.streamlit.app/" },
+      {
+        label: "Source",
+        href: "https://github.com/kiransree2002/revio-ai-review-assistant",
+      },
+    ],
+  },
+  {
     name: "Vehicle Damage Assessment & Insurance Claim Assistant",
     featured: true,
     problem:
